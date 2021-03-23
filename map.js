@@ -1,11 +1,11 @@
+
+
 const mapFunction = (myArray, callback) => {
-    const newArr = [];
-    for(let strings of myArray) {
-        if(strings.charAt() {
-            newArr.push(strings.toUpperCase()); 
-        }
+    const emptyArray = [...myArray];
+    for(let i = 0; i < myArray.length; i++ ) {
+        emptyArray[i] = callback(emptyArray[i]);
     }
-    return newArr;
+    return emptyArray;
 };
 
-module.exports = {mapFunction};
+module.exports = mapFunction;
