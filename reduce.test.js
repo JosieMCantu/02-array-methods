@@ -1,9 +1,11 @@
-describe.skip('map function', () => {
-    it('create a new array with the return value of each callback', () => {
+const reduceFunction = require('./reduce');
 
-        const newArr = mapFunction(myArray, callback);
-        
+describe('reduce function', () => {
+    it('Takes an Array and callback of signature (accumulator, item) => {} and an (optional) second initialValue parameter that is the initial value of the accumulator. After each function call, the return value is passed as the accumulator argument of the next function call.', () => {
+        const newArray = [1, 2, 3, 4, 5];
 
-        expect().toEqual();
+        const lastArr = reduceFunction(newArray, (a, b) => (a+b));
+
+        expect(lastArr).toEqual(15);
     });
 });
