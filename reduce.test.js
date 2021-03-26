@@ -6,6 +6,7 @@ describe('reduce function', () => {
 
         const lastArr = reduceFunction(newArray, (a, b) => (a+b));
 
+
         expect(lastArr).toEqual(15);
     });
 });
